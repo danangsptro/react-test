@@ -54,7 +54,7 @@ function AppEdit() {
 
   useEffect(() => {
     fetchData();
-  }, [setEdit]);
+  }, []);
 
   return (
     <div className="md:container md:mx-auto mt-10">
@@ -97,7 +97,6 @@ function AppEdit() {
           <input
             type="file"
             name="avatar"
-            // value={data.avatar}
             onChange={handleChange}
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
           />
@@ -132,7 +131,7 @@ function AppEdit() {
               id="floating_first_name"
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
-                onChange={handleChange}
+              onChange={handleChange}
               value={data.first_name}
             />
             <label
@@ -150,7 +149,7 @@ function AppEdit() {
               className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder=" "
               value={data.last_name}
-                onChange={handleChange}
+              onChange={handleChange}
               required=""
             />
             <label
@@ -163,7 +162,7 @@ function AppEdit() {
         </div>
         <button
           type="button"
-          onChange={editData}
+          onClick={editData}
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit
